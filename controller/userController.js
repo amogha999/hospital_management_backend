@@ -51,7 +51,7 @@ export const addAdmin=catchAsyncError(async(req,res,next)=>{
         return next(new ErrorHandler(`${isRegistered.role} with this email already Exists`,400))
     }
 
-    const admin=await Users.create({firstName,lastName,email,phone,age,gender,password,role:"Admin"})
+    const admin=await Users.create({firstName,lastName,email,phone,age,gender,password,role:"Admin"} ,console.log("Sucess"))
 })
 
 export const getDoctors= catchAsyncError(async(req,res,next)=>{
